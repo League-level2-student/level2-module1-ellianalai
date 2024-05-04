@@ -12,9 +12,9 @@ public class IntroToArrayLists {
 		stuff.add("i dunno");
 		stuff.add("why");
 		stuff.add("hmm?");
-		stuff.add("umm");
+		stuff.add("eek");
 		//3. Print all the Strings using a standard for-loop
-		for(int i = 0; i< stuff.size(); i++) {
+		/*for(int i = 0; i< stuff.size(); i++) {
 			String s = stuff.get(i);
 			System.out.println(s);
 		}
@@ -28,14 +28,27 @@ public class IntroToArrayLists {
 				String s = stuff.get(i);
 				System.out.println(s);
 			}
-			
+
 		}
+		*/
+
 		//6. Print all the Strings in reverse order.
-		for(int i = 5; i> stuff.size(); i--) {
+		for(int i = 4; i >=0; i--) {
 				String s = stuff.get(i);
 				System.out.println(s);
+
+		}
+		 
+		//7. Print only the Strings that have the letter 'e' in them.
+		for(int i = 0; i<stuff.size(); i++) {
+			String s = stuff.get(i);
+			if(s.contains("e")) {
+				System.out.println(s);
+			}
+			
 			
 		}
-		//7. Print only the Strings that have the letter 'e' in them.
+
+
 	}
 }
