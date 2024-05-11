@@ -22,7 +22,8 @@ public class GuestBook implements ActionListener{
 	JPanel panel = new JPanel();
 	JButton button = new JButton();
 	JButton button2 = new JButton();
-	String guestlist;
+	String guestlist = "";
+	int num;
 	ArrayList <String> names = new ArrayList <String>();
 	
 	public GuestBook() {
@@ -47,20 +48,20 @@ public class GuestBook implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		JButton buttonclicked = (JButton)e.getSource();
-		
+		guestlist = "";
 		if(buttonclicked == button) {
+			num+=1;
 			String guest = JOptionPane.showInputDialog("Enter a name");
-			names.add(guest);
+			names.add("Guest #" + num + ": " + guest + "\n");
 		}
 		
 		if(buttonclicked == button2) {
 			for(int i=0; i<names.size(); i++) {
 				String s = names.get(i);
-				int n = i+1;
-				guestlist = s;
+				guestlist = guestlist+s;
 				
 			}
-		
+			JOptionPane.showMessageDialog(null, guestlist);
 		}
 		
 	}
